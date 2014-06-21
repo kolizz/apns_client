@@ -7,10 +7,13 @@ processing of the device token for when the actual binary token is around.
 
 ### Getting started
 
+```ruby
     gem 'apns_client', git: 'https://github.com/kolizz/apns_client.git'
+```
  
 ### Usage
 
+```ruby
     # Create client.
     client = ApnsClient::Client.new("gateway.sandbox.push.apple.com", "feedback.sandbox.push.apple.com", File.read("path/to/certificate.pem")))   
     
@@ -19,6 +22,7 @@ processing of the device token for when the actual binary token is around.
     
     # Send it
     client.send(notification)
+```
 
 ### License
 
