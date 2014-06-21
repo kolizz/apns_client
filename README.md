@@ -8,20 +8,20 @@ processing of the device token for when the actual binary token is around.
 ### Getting started
 
 ```ruby
-    gem 'apns_client', git: 'https://github.com/kolizz/apns_client.git'
+gem 'apns_client', git: 'https://github.com/kolizz/apns_client.git'
 ```
  
 ### Usage
 
 ```ruby
-    # Create client.
-    client = ApnsClient::Client.new("gateway.sandbox.push.apple.com", "feedback.sandbox.push.apple.com", File.read("path/to/certificate.pem")))   
+# Create client.
+client = ApnsClient::Client.new("gateway.sandbox.push.apple.com", "feedback.sandbox.push.apple.com", File.read("path/to/certificate.pem")))   
     
-    # Create notification. First argument is an arbitrary notification id. Device token is the binary string from iOS/OS X.
-    notification = ApnsClient::Notification.new(1, device_token, alert: "hello world")
+# Create notification. First argument is an arbitrary notification id. Device token is the binary string from iOS/OS X.
+notification = ApnsClient::Notification.new(1, device_token, alert: "hello world")
     
-    # Send it
-    client.send(notification)
+# Send it
+client.send(notification)
 ```
 
 ### License
